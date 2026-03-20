@@ -4,13 +4,20 @@
     "name": "Wireless Headphones",
     "description": "Noise-cancelling over-ear headphones.",
     "price": 99.99,
-    "image": "/images/headphones.jpg"
+    "image": "https://via.placeholder.com/150"
   },
   {
     "id": 2,
     "name": "Gaming Laptop",
     "description": "High performance laptop for gaming and work.",
     "price": 1299.99,
-    "image": "/images/laptop.jpg"
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 3,
+    "name": "Mechanical Keyboard",
+    "description": "RGB backlit mechanical keyboard.",
+    "price": 79.99,
+    "image": "https://via.placeholder.com/150"
   }
 ]
