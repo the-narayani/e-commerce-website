@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 
-export default function ProductDetails({ products }) {
+export default function ProductDetails({ products, addToCart, addToWishlist }) {
   const { id } = useParams();
   const productId = Number(id);
   const product = products.find((p) => p.id === productId);
@@ -16,9 +16,13 @@ export default function ProductDetails({ products }) {
       <p>{product.description}</p>
       <p>Price: ${product.price}</p>
 
-      {/* Buttons will later call addToCart / addToWishlist */}
-      <button>Add to Cart</button>
-      <button style={{ marginLeft: "0.5rem" }}>Add to Wishlist</button>
+      <button onClick={() => addToCart(product.id)}>Add to Cart</button>
+      <button
+        style={{ marginLeft: "0.5rem" }}
+        onClick={() => addToWishlist(product.id)}
+      >
+        Add to Wishlist
+      </button>
     </div>
   );
 }
