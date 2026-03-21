@@ -9,12 +9,43 @@ import productsData from "./data/products.json";
 
 function App() {
   const [products, setProducts] = useState([]);
-  const [cart, setCart] = useState([]);       // [{ id, name, price, quantity, ... }]
-  const [wishlist, setWishlist] = useState([]); // [{ id, name, price, ... }]
+  const [cart, setCart] = useState([]);
+  const [wishlist, setWishlist] = useState([]);
+  const [isInitialized, setIsInitialized] = useState(false); // <-- NEW
 
+  // 1. Load product data
   useEffect(() => {
     setProducts(productsData);
   }, []);
+
+  // 2. Load saved cart/wishlist BEFORE enabling saving
+  useEffect(() => {
+    const savedCart = localStorage.getItem("cart");
+    const savedWishlist = localStorage.getItem("wishlist");
+
+    if (savedCart) setCart(JSON.parse(savedCart));
+    if (savedWishlist) setWishlist(JSON.parse(savedWishlist));
+
+    setIsInitialized(true); // <-- IMPORTANT
+  }, []);
+
+  // 3. Save cart AFTER initialization
+  useEffect(() => {
+    if (isInitialized) {
+      localStorage.setItem("cart", JSON.stringify(cart));
+    }
+  }, [cart, isInitialized]);
+
+  // 4. Save wishlist AFTER initialization
+  useEffect(() => {
+    if (isInitialized) {
+      localStorage.setItem("wishlist", JSON.stringify(wishlist));
+    }
+  }, [wishlist, isInitialized]);
+
+  // -----------------------------
+  // CART & WISHLIST FUNCTIONS
+  // -----------------------------
 
   function addToCart(productId) {
     setCart((prev) => {
