@@ -10,15 +10,17 @@ export default function ProductList({ products }) {
 
   return (
     <div className="p-6">
-      <h1 className="text-3xl font-bold mb-4">Products</h1>
+      <h1 className="text-3xl font-bold mb-4"></h1>
 
-      <input
-        type="text"
-        placeholder="Search products..."
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-        className="border p-2 w-80 mb-6 rounded"
-      />
+      <div className="flex justify-center w-full">
+  <input
+    type="text"
+    placeholder="Search products..."
+    value={search}
+    onChange={(e) => setSearch(e.target.value)}
+    className="border p-2 w-80 mb-6 rounded shadow-sm focus:ring-2 focus:ring-black outline-none transition-all"
+  />
+</div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {filteredProducts.map((p) => (
