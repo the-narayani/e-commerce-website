@@ -9,37 +9,37 @@ export default function ProductList({ products }) {
   );
 
   return (
-    <div style={{ padding: "1rem" }}>
-      <h1>Products</h1>
+    <div className="p-6">
+      <h1 className="text-3xl font-bold mb-4">Products</h1>
 
-      {/* Search Input */}
       <input
         type="text"
         placeholder="Search products..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
-        style={{
-          padding: "0.5rem",
-          marginBottom: "1rem",
-          width: "300px",
-          display: "block",
-        }}
+        className="border p-2 w-80 mb-6 rounded"
       />
 
-      <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {filteredProducts.map((p) => (
           <div
             key={p.id}
-            style={{
-              border: "1px solid #ccc",
-              padding: "1rem",
-              width: "200px",
-            }}
+            className="border rounded-lg p-4 shadow hover:shadow-lg transition"
           >
-            <img src={p.image} alt={p.name} style={{ width: "100%" }} />
-            <h3>{p.name}</h3>
-            <p>${p.price}</p>
-            <Link to={`/products/${p.id}`}>View Details</Link>
+            <img
+              src={p.image}
+              alt={p.name}
+              className="w-full h-40 object-cover rounded"
+            />
+            <h3 className="text-xl font-semibold mt-2">{p.name}</h3>
+            <p className="text-gray-600">${p.price}</p>
+
+            <Link
+              to={`/products/${p.id}`}
+              className="inline-block mt-3 text-blue-600 hover:underline"
+            >
+              View Details
+            </Link>
           </div>
         ))}
       </div>
