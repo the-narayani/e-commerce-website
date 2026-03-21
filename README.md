@@ -28,7 +28,9 @@ Bash: git clone <your-repo-url>cd ecommerce-app
 Install dependencies:
 npm install
 Start the development serverBashnpm start
-Your app will run at: http://localhost:3000🎨 Tailwind ConfigurationThis project uses Tailwind CSS. The configuration is as follows:tailwind.config.jsJavaScriptmodule.exports = {
+Your app will run at: http://localhost:3000
+
+🎨 Tailwind ConfigurationThis project uses Tailwind CSS. The configuration is as follows:tailwind.config.jsJavaScriptmodule.exports = {
 content: ["./src/**/*.{js,jsx,ts,tsx}"],
 theme: {
 extend: {},
