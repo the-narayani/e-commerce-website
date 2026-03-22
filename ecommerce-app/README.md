@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+📦 E-Commerce Product Page (React + Tailwind CSS)A simple, clean, and fully functional e-commerce product page built with React, React Router, Tailwind CSS, and localStorage.This project was created as part of a Software Engineering assignment to understand component architecture, state management, data flow, and real-world UI behavior.🚀 Features✅ Core FunctionalityView a list of productsView detailed information for each productAdd items to CartAdd items to WishlistUpdate item quantity in cartRemove items from cart or wishlistMove items between cart ↔ wishlistAutomatic total price calculationPersistent cart & wishlist using localStorage🎨 UI & StylingFully styled using Tailwind CSSClean background and dark-themed NavbarResponsive layout (Mobile & Desktop friendly)Modern product cards with hover effectsRight-aligned icons for navigationGolden cart emoji 🛒 and pink wishlist heart 💗🔍 Bonus FeaturesSearch bar to filter products by name in real-timeState persistence across page reloads (Data doesn't disappear on refresh)🛠️ Tech StackTechnologyPurposeReact.jsUI components & state managementReact RouterNavigation between pagesTailwind CSSUtility-first styling & layoutlocalStoragePersisting cart & wishlist dataJSONLocal product data source📁 Project StructurePlaintextsrc/
+├── components/
+│ ├── Navbar.jsx
+│ ├── ProductList.jsx
+│ ├── ProductDetails.jsx
+│ ├── Cart.jsx
+│ └── Wishlist.jsx
+├── data/
+│ └── products.json
+├── App.jsx
+├── index.js
+└── index.css (Tailwind imports)
+⚙️ Installation & SetupClone the repositoryBashgit clone <your-repo-url>
+cd ecommerce-app
+Install dependenciesBashnpm install
+Start the development serverBashnpm start
+Your app will run at: http://localhost:3000🎨 Tailwind ConfigurationThis project uses Tailwind CSS. The configuration is as follows:tailwind.config.jsJavaScriptmodule.exports = {
+content: ["./src/**/*.{js,jsx,ts,tsx}"],
+theme: {
+extend: {},
+},
+plugins: [],
+}
+index.cssCSS@tailwind base;
+@tailwind components;
+@tailwind utilities;
+🧠 Architecture OverviewApp.jsx is the "Brain": It manages the global state for products, the cart, and the wishlist.Data Flows Downward: App passes data and logic functions to child components via props.Actions Flow Upward: Child components call these functions to trigger state updates in the parent.Lifecycle & Persistence:useEffect (on mount): Restores saved data from localStorage.useEffect (on update): Saves the current state to localStorage whenever the cart or wishlist changes.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+🤖 AI Assistance Disclosure
+Parts of this project (including component structure, logic optimization, and documentation) were developed with the assistance of Gemini and Copilot following all academic and assignment guidelines.

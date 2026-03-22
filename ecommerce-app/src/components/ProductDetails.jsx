@@ -28,7 +28,7 @@ export default function ProductDetails({ products, addToCart, addToWishlist }) {
 
       <button
         onClick={() => addToWishlist(product.id)}
-        className="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-800"
+        className="bg-red-700 text-white px-4 py-2 rounded hover:bg-gray-800"
       >
         Add to Wishlist
       </button>

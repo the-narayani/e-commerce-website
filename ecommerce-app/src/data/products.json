@@ -4,20 +4,41 @@
     "name": "Wireless Headphones",
     "description": "Noise-cancelling over-ear headphones.",
     "price": 99.99,
-    "image": "https://via.placeholder.com/150"
+    "image": "https://www.cowinaudio.com/cdn/shop/files/e7-active-noise-cancelling-headphones-wireless-50-bluetooth-headphones-with-rich-bass-headphone-cowinaudio-purple-138758_2048x.jpg?v=1760427774"
   },
   {
     "id": 2,
     "name": "Gaming Laptop",
     "description": "High performance laptop for gaming and work.",
     "price": 1299.99,
-    "image": "https://via.placeholder.com/150"
+    "image": "https://m.media-amazon.com/images/I/71sgAr9atBS.jpg"
   },
   {
     "id": 3,
     "name": "Mechanical Keyboard",
     "description": "RGB backlit mechanical keyboard.",
     "price": 79.99,
-    "image": "https://via.placeholder.com/150"
+    "image": "https://i.imgur.com/XmCdENj.png"
+  },
+  {
+    "id": 4,
+    "name": "Smart Watch",
+    "description": "Fitness tracker with heart rate monitor and GPS.",
+    "price": 199.99,
+    "image": "https://www.pinwheel.com/hs-fs/hubfs/Watch%20Front%20Black.png?width=540&height=540&name=Watch%20Front%20Black.png"
+  },
+  {
+    "id": 5,
+    "name": "UltraWide Monitor",
+    "description": "34-inch curved display for immersive productivity.",
+    "price": 449.99,
+    "image": "https://i.ytimg.com/vi/Dt71M9RlpPI/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAjMlwJs_MMTpC6iICtK3qdfLNdig"
+  },
+  {
+    "id": 6,
+    "name": "Portable SSD",
+    "description": "1TB high-speed external storage for backup and gaming.",
+    "price": 129.99,
+    "image": "https://m.media-amazon.com/images/I/711-n+US0bL.jpg"
   }
 ]

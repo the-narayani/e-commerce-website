@@ -26,13 +26,14 @@ export default function ProductList({ products }) {
         {filteredProducts.map((p) => (
           <div
             key={p.id}
-            className="border rounded-lg p-4 shadow hover:shadow-lg transition"
+            className="bg-white border border-gray-100 border rounded-lg p-4 shadow hover:shadow-lg transition"
           >
-            <img
-              src={p.image}
-              alt={p.name}
-              className="w-full h-40 object-cover rounded"
-            />
+             <div>
+                  <img
+                    src={p.image}
+                    alt={p.name}
+                    className="w-full h-40 object-cover rounded"
+                  />
             <h3 className="text-xl font-semibold mt-2">{p.name}</h3>
             <p className="text-gray-600">${p.price}</p>
 
@@ -43,8 +44,11 @@ export default function ProductList({ products }) {
               View Details
             </Link>
           </div>
+        </div>
+       
         ))}
       </div>
+      
     </div>
   );
 }

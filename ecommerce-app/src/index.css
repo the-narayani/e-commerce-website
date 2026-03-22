@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply bg-gradient-to-br from-gray-100 to-gray-200 min-h-screen;
+  @apply bg-gradient-to-br from-gray-100 to-gray-500 min-h-screen;
 }
